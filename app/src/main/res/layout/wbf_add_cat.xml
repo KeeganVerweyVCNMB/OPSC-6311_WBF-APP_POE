@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".wbf_add_cat">
+
+    <!--(xml, s., M, P., Arputharaj, V. and Katz, A., 2021. )-->
+    <ImageView
+        android:id="@+id/imgWilliesLandingLogo"
+        android:layout_width="413dp"
+        android:layout_height="169dp"
+        android:contentDescription="WilliesLandingLogo"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/tvCat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/willies_landing_logo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddNewCat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/rounded_button"
+        android:text="ADD CATEGORY"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddGoal" />
+
+    <TextView
+        android:id="@+id/tvCat"
+        android:layout_width="212dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="89dp"
+        android:text="Add Category:"
+        android:paddingRight="10dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/txtCatName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgWilliesLandingLogo" />
+
+    <EditText
+        android:id="@+id/txtCatName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/input_border"
+        android:ems="10"
+        android:hint="Add Category"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtAddGoal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCat" />
+
+    <EditText
+        android:id="@+id/txtAddGoal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="49dp"
+        android:background="@drawable/input_border"
+        android:ems="10"
+        android:hint="Add Goal"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddNewCat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCatName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

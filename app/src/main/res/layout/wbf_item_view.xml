@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".wbf_item_view">
+
+    <ImageView
+        android:id="@+id/ImgItemView"
+        android:layout_width="130dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginBottom="216dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/itemCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imvWilliesStock"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/ItemTitle"
+        android:layout_width="399dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="56dp"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:paddingLeft="45dp"
+        android:text="TextView"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ItemDescTxt"
+        app:layout_constraintEnd_toStartOf="@+id/ItemDesc"
+        app:layout_constraintStart_toStartOf="@+id/ItemDesc"
+        app:layout_constraintTop_toBottomOf="@+id/ImgItemView" />
+
+    <TextView
+        android:id="@+id/ItemDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:text="TextView"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/itemCode"
+        app:layout_constraintStart_toStartOf="@+id/itemCode" />
+
+    <TextView
+        android:id="@+id/ItemQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="TextView"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/ItemsSell"
+        app:layout_constraintStart_toStartOf="@+id/ItemsSell" />
+
+    <TextView
+        android:id="@+id/ItemQtyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="23dp"
+        android:text="Quantity :"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCodeTxt" />
+
+    <TextView
+        android:id="@+id/ItemSellTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="65dp"
+        android:text="Price :"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/ItemsSell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="65dp"
+        android:text="TextView"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/itemCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="TextView"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/ItemQty"
+        app:layout_constraintStart_toStartOf="@+id/ItemQty" />
+
+    <TextView
+        android:id="@+id/ItemDescTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="Description :"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ItemDesc" />
+
+    <TextView
+        android:id="@+id/itemCodeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="26dp"
+        android:text="Item Code :"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemDescTxt" />
+
+    <ImageView
+        android:id="@+id/imvWilliesStock"
+        android:layout_width="0dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="1dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/willies_logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
