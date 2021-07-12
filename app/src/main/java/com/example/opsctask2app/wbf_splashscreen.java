@@ -1,8 +1,6 @@
 package com.example.opsctask2app;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,9 +23,6 @@ public class wbf_splashscreen extends AppCompatActivity {
 
     //Set timeout
     private static int SPLASH_SCREEN = 4500;
-
-    SharedPreferences sharedPreferences;
-    SharedPreferences.Editor sharedEditor;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -57,15 +52,16 @@ public class wbf_splashscreen extends AppCompatActivity {
         subHead.setAnimation(bottomSplash);
 
         //Checking if user is first time user
-        sharedPreferences = getPreferences(Context.MODE_PRIVATE);
-        sharedEditor = sharedPreferences.edit();
+        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isFirstRun", true);
 
+        //tutorialspoint.com. 2021.
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 //If first time user navigate to wbf_user_guide
-                if (AppLaunched())
+                if (isFirstRun)
                 {
+                   getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean("isFirstRun", false).commit();
                    Intent intent = new Intent(wbf_splashscreen.this, wbf_user_guide.class);
                    startActivity(intent);
                    finish();
@@ -79,19 +75,5 @@ public class wbf_splashscreen extends AppCompatActivity {
             }
         },SPLASH_SCREEN);
 
-    }
-
-    //tutorialspoint.com. 2021.
-    //Method for checking if user is first time user
-    public boolean AppLaunched() {
-        if (sharedPreferences.getBoolean("firstTimeUser", true)) {
-            sharedEditor.putBoolean("firstTimeUser", false);
-            sharedEditor.commit();
-            sharedEditor.apply();
-            return true;
-        }
-        else {
-            return false;
-        }
     }
 }
