@@ -6,8 +6,11 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -128,6 +131,24 @@ public class wbf_stock_cat_m extends AppCompatActivity {
             }
         };
         query.addListenerForSingleValueEvent(valueEventListener);
+    }
+
+    //Add action bar button
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    //Handle button activities
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.btnNavHome) {
+            startActivity(new Intent(wbf_stock_cat_m.this, wbf_dashboard.class));
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
 

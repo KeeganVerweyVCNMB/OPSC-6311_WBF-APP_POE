@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".wbf_scanner">
+
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:id="@+id/viewForScanner"
+        android:layout_width="400dp"
+        android:layout_height="415dp"
+        app:autoFocusButtonColor="@color/orange"
+        app:autoFocusButtonVisible="true"
+        app:flashButtonColor="@color/orange"
+        app:flashButtonVisible="true"
+        app:frameAspectRatioHeight="1"
+        app:frameAspectRatioWidth="1"
+        app:frameColor="@color/orange"
+        app:frameCornersRadius="0dp"
+        app:frameCornersSize="70dp"
+        app:frameSize="0.75"
+        app:frameThickness="7dp"
+        app:maskColor="#A3FFFFFF" />
+
+    <TextView
+        android:id="@+id/tvScannerID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewForScanner"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Ready to scan product..." />
+
+    <ImageView
+        android:id="@+id/imgScannerLogo"
+        android:layout_width="368dp"
+        android:layout_height="196dp"
+        android:layout_below="@id/tvScannerID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        app:srcCompat="@drawable/willies_landing_logo" />
+
+
+</RelativeLayout>

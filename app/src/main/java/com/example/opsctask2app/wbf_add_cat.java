@@ -1,11 +1,14 @@
 package com.example.opsctask2app;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.text.method.PasswordTransformationMethod;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -112,6 +115,24 @@ public class wbf_add_cat extends AppCompatActivity {
 
             }
         });
+    }
+
+    //Add action bar button
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    //Handle button activities
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.btnNavHome) {
+            startActivity(new Intent(wbf_add_cat.this, wbf_dashboard.class));
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     //Numeric keyboard class

@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 public class wbf_dashboard extends AppCompatActivity {
     //Setting Variables
-    LinearLayout CardFolders, AddFile, SignOut, AddItem, ItemGraph, TotalItems, TotalValue;
+    LinearLayout CardFolders, AddFile, SignOut, AddItem, ItemGraph, TotalItems, TotalValue, Scanner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class wbf_dashboard extends AppCompatActivity {
         ItemGraph.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(wbf_dashboard.this, "Upgrade to Premium for feature", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(wbf_dashboard.this, wbf_items_graph.class));
             }
         });
 
@@ -50,7 +50,7 @@ public class wbf_dashboard extends AppCompatActivity {
         TotalItems.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(wbf_dashboard.this, "Upgrade to Premium for feature", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(wbf_dashboard.this, wbf_total_items.class));
             }
         });
 
@@ -58,7 +58,7 @@ public class wbf_dashboard extends AppCompatActivity {
         TotalValue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(wbf_dashboard.this, "Upgrade to Premium for feature", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(wbf_dashboard.this, wbf_total_value.class));
             }
         });
 
@@ -86,6 +86,15 @@ public class wbf_dashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(wbf_dashboard.this, wbf_login.class));
+            }
+        });
+
+        //Navigate to wbf_scanner page
+        Scanner=findViewById(R.id.btnBarcodeScanner);
+        Scanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(wbf_dashboard.this, wbf_scanner.class));
             }
         });
 
